@@ -20,7 +20,7 @@ import java.io.*;
 public class ServiceMain {
 
 	public static void main(String[] args) throws IOException{
-		//주석8 : 파일 입력 사용
+		//주석8 : 파일 입출력 사용
 		BufferedWriter bw = new BufferedWriter(new FileWriter("ottFile.txt", true));
 		
 		//주석6 : 참조타입(열거타입) 사용
@@ -44,7 +44,7 @@ public class ServiceMain {
 			case 7:
 				today = Week.SATURDAY; break;	
 		}
-		//주석8 : 파일 입력 사용
+		//주석8 : 파일 입출력 사용
 		bw.write("오늘의 요일은 "+today+"입니다.");
 		bw.newLine();
 		
@@ -97,12 +97,12 @@ public class ServiceMain {
 		for(int i=0; i<list.size(); i++) {
 			sum+=list.get(i);
 		}
-		//주석8 : 파일 입력 사용
+		//주석8 : 파일 입출력 사용
 		bw.write("총 지불 금액은 "+sum+"원 입니다.");
 		bw.newLine();
 		bw.close();
 		
-		//주석8 : 파일 출력 사용
+		//주석8 : 파일 입출력 사용
 		//주석4 : 예외 처리
 		BufferedReader br = null;
 		try {
